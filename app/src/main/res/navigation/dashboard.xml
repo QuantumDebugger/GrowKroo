@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.growkroo.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_profile_fragment"
+            app:destination="@id/profile_fragment" />
+        <action
+            android:id="@+id/action_home2_to_progress_fragment"
+            app:destination="@id/progress_fragment" />
+        <action
+            android:id="@+id/action_home2_to_fab_fragment"
+            app:destination="@id/fab_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.example.growkroo.profile_fragment"
+        android:label="fragment_profile_fragment"
+        tools:layout="@layout/fragment_profile_fragment" >
+        <action
+            android:id="@+id/action_profile_fragment_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/progress_fragment"
+        android:name="com.example.growkroo.progress_fragment"
+        android:label="fragment_progress_fragment"
+        tools:layout="@layout/fragment_progress_fragment" >
+        <action
+            android:id="@+id/action_progress_fragment_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fab_fragment"
+        android:name="com.example.growkroo.fab_fragment"
+        android:label="fragment_fab_fragment"
+        tools:layout="@layout/fragment_fab_fragment" >
+        <action
+            android:id="@+id/action_fab_fragment_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+</navigation>
