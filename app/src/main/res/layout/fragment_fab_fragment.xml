@@ -74,12 +74,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/add_date"
                 android:layout_margin="5dp"
                 android:text="@string/add_date"/>
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/calender"
                 android:text="@string/calender"
                 android:layout_margin="5dp"/>
 
