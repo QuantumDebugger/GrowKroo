@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fab_fragment">
+    tools:context=".fab_fragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:orientation="vertical"
@@ -21,8 +22,9 @@
             android:layout_height="wrap_content"
             android:text="@string/add_title"
             android:padding="5dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/oswald_variable_font_wght"
             android:layout_marginBottom="15dp"
-            android:textStyle="italic|bold"
             android:textAlignment="textStart"
             />
         <androidx.cardview.widget.CardView
@@ -48,7 +50,8 @@
             android:text="@string/description"
             android:padding="5dp"
             android:layout_marginBottom="15dp"
-            android:textStyle="italic|bold"
+            android:textStyle="bold"
+            android:fontFamily="@font/oswald_variable_font_wght"
             android:textAlignment="textStart"
             />
         <androidx.cardview.widget.CardView
@@ -83,6 +86,8 @@
 
 
         </LinearLayout>
+
+
 
 
 

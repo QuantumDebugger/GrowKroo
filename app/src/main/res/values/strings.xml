@@ -13,8 +13,8 @@
     <string name="profile_fragment">PROFILE FRAGMENT</string>
     <string name="progress_fragment">PROGRESS FRAGMENT</string>
     <string name="enter_your_task">Enter your task</string>
-    <string name="add_title">Add Title</string>
-    <string name="description">Description</string>
+    <string name="add_title">Add Task Title</string>
+    <string name="description">Task Description</string>
     <string name="add_date">Add Date</string>
     <string name="calender">Calender</string>
 </resources>
