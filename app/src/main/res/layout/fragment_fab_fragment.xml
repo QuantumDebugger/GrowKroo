@@ -1,95 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fab_fragment"
-    android:background="@color/white">
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fab_fragment">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Create Task"
+            android:textSize="25sp"
+            android:fontFamily="@font/oswald_variable_font_wght"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:padding="8dp"/>
+
+        <TextView
             android:id="@+id/tvAddTitle"
             android:layout_width="wrap_content"
-            android:textSize="25sp"
             android:layout_height="wrap_content"
-            android:text="@string/add_title"
-            android:padding="5dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/oswald_variable_font_wght"
             android:layout_marginBottom="15dp"
+            android:fontFamily="@font/oswald_variable_font_wght"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:text="@string/add_title"
             android:textAlignment="textStart"
-            />
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/cdTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true">
 
             <EditText
                 android:id="@+id/etEnterTitle"
-                android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:hint="@string/add_title"
-                android:layout_marginBottom="15dp"
-                />
+
+                android:padding="15dp" />
 
         </androidx.cardview.widget.CardView>
 
         <TextView
+            android:id="@+id/tvAddCaterogy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/oswald_variable_font_wght"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:text="@string/add_category"
+            android:textAlignment="textStart"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cdCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/etEnterCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="Select Category"
+
+                    android:padding="15dp" />
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="Add Category">
+
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+
+
+
+        <TextView
             android:id="@+id/tvAddDis"
             android:layout_width="wrap_content"
-            android:textSize="25sp"
             android:layout_height="wrap_content"
-            android:text="@string/description"
-            android:padding="5dp"
             android:layout_marginBottom="15dp"
-            android:textStyle="bold"
             android:fontFamily="@font/oswald_variable_font_wght"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:text="@string/description"
             android:textAlignment="textStart"
-            />
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/cdDis"
             android:layout_width="match_parent"
             android:layout_height="150dp">
+
             <EditText
                 android:id="@+id/etAddDis"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="top"
+                android:layout_margin="5dp"
+                android:padding="5dp"
                 android:hint="@string/description"
 
                 />
 
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvAddDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Date"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:textSize="25sp"
+            android:fontFamily="@font/oswald_variable_font_wght"
+            android:textStyle="bold"
+            />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/add_date"
-                android:layout_margin="5dp"
-                android:text="@string/add_date"/>
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/calender"
-                android:text="@string/calender"
-                android:layout_margin="5dp"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <EditText
+                    android:id="@+id/etAddDate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:hint="Enter Start Date"/>
+
+                <EditText
+                    android:id="@+id/etAddDate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:hint="Enter End Date"/>
 
 
 
         </LinearLayout>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:padding="5dp"
+            android:text="ADD"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/oswald_variable_font_wght">
 
+        </com.google.android.material.button.MaterialButton>
 
 
 
@@ -101,4 +201,4 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

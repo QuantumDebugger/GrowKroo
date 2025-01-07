@@ -26,6 +26,16 @@ class home : Fragment() {
     private var binding : FragmentHomeBinding? = null
     lateinit var navController: NavController
 
+    //Lists Initialization
+    var taskList = arrayListOf<TaskDataClass>()
+    var categoryList = arrayListOf<CategoryDataClass>()
+
+    //recycler Initialization
+    lateinit var adapter : TaskRecyclerAdapter
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -40,6 +50,8 @@ class home : Fragment() {
             navController = findNavController()
             navController.navigate(R.id.fab_fragment)
 
+
+
         }
 
 
@@ -49,6 +61,9 @@ class home : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
+
         binding = FragmentHomeBinding.inflate(layoutInflater)
         return binding?.root
         // Inflate the layout for this fragment
